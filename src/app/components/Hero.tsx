@@ -4,18 +4,17 @@ import Chevrons from "./Chevrons";
 
 export default function Hero() {
   return (
-    <section id="top" className="corner-stripes relative overflow-hidden bg-ink text-paper">
-      <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
-        <div className="absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full bg-sun" />
-      </div>
-      <div className="relative mx-auto max-w-6xl px-5 md:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
-        {/* <p className="reveal text-sun font-semibold tracking-[0.3em] text-xs md:text-sm uppercase mb-6">
-          {EVENT.organisers} present
-        </p> */}
-        <p className="tag-label text-xs uppercase mb-3">
+    <section id="top" className="relative overflow-hidden bg-ink text-paper">
+      {/* Decorative layer — pinned behind everything, clipped to the section */}
+      <div className="corner-stripes absolute inset-0 -z-10 pointer-events-none" />
+      <div className="absolute -right-24 -top-24 h-[36rem] w-[36rem] rounded-full bg-sun opacity-[0.06] -z-10 pointer-events-none" />
+
+      {/* Content layer — explicitly above the decoration */}
+      <div className="relative z-10 mx-auto max-w-6xl px-5 md:px-8 pt-16 pb-20 md:pt-24 md:pb-28">
+        <p className="tag-label text-xs uppercase mb-6">
           <span>{EVENT.organisers} present</span>
         </p>
-        <h1 className="reveal font-display text-[16vw] leading-[0.82] md:text-[8.5rem] text-sun">
+        <h1 className="reveal font-display text-[16vw] leading-[0.85] md:text-[8.5rem] text-sun mt-2">
           TORQON
         </h1>
         <p
