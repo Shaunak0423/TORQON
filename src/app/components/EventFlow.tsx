@@ -6,9 +6,10 @@ const steps = [
   { label: "Start · TORQMAN / 10K / 5K / 3K", detail: "Pick your route, hit the road" },
   { label: "TORQMAN Challenge Checkpoints", detail: "Push-ups, Squats, Burpees & more mini-challenges along the way" },
   { label: "Finish", detail: "Cross the line" },
-  { label: "Prize Distribution", detail: "Podium for the top finishers" },
   { label: "Ice Bath", detail: "Recover hard, earn the reset" },
+  { label: "Prize Distribution", detail: "Podium for the top finishers" },
 ];
+
 
 export default function EventFlow() {
   return (
