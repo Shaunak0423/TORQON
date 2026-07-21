@@ -62,7 +62,7 @@ export default function Team() {
       </div>
 
       <h3 className="font-display text-3xl mb-8">Cosmic Media — Founders</h3>
-      <div className="grid sm:grid-cols-2 gap-8">
+      {/* <div className="grid sm:grid-cols-2 gap-8">
         {founders.map((f) => (
           <div key={f.name} className="flex gap-4">
             <Avatar name={f.name} />
@@ -76,7 +76,7 @@ export default function Team() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
