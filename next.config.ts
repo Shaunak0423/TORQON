@@ -1,12 +1,15 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
- output: 'export',
+const nextConfig = {
+  output: "export",
+
+  basePath: "/TORQON",
+  assetPrefix: "/TORQON/",
+
   images: {
     unoptimized: true,
   },
-  basePath: '/TORQON',
-  assetPrefix: '/TORQON/',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
+
