@@ -57,7 +57,7 @@ export default function TargetAudience() {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <p className="text-sm text-ink/40 mb-4">
             Where interest is coming from — social survey, 1,113 responses
           </p>
@@ -76,8 +76,8 @@ export default function TargetAudience() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     </section>
   );

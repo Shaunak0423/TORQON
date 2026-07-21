@@ -32,7 +32,7 @@ export default function EventFlow() {
               </div>
             </div>
             {i < steps.length - 1 && (
-              <div className="pl-10 md:pl-14">
+              <div className="pl-10 md:pt-10">
                 <RouteDivider color="var(--ink-40)" className="h-6 md:h-8" />
               </div>
             )}

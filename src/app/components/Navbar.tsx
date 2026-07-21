@@ -1,10 +1,10 @@
 import RegisterButton from "./RegisterButton";
 
 const links = [
-  { href: "#about", label: "About" },
   { href: "#event", label: "The Event" },
   { href: "#categories", label: "Categories" },
   { href: "#sponsors", label: "Sponsors" },
+  { href: "#about", label: "About" },
   { href: "#team", label: "Team" },
 ];
 

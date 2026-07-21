@@ -15,12 +15,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <WhyTorqon />
         <EventFlow />
         <Categories />
         <TargetAudience />
         <Sponsorship />
+        <About />
         <Team />
       </main>
       <CTAFooter />

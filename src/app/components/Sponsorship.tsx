@@ -6,7 +6,7 @@ const benefits = [
   "Standees",
   "Water stations",
   "Registration desks",
-  "Instagram, Facebook, YouTube & website",
+  "Instagram, Facebook & Website",
 ];
 
 export default function Sponsorship() {
