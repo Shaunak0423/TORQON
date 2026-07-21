@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #0b1524;         /* poster's deep navy — main dark bg/text */
+  --paper: #f4f6f8;       /* cool near-white, replaces warm cream */
+  --sun: #f2661e;         /* poster orange — main accent, was mustard yellow */
+  --coral: #1c9db3;       /* poster teal — was pink/coral */
+  --sage: #bde4e8;        /* pale teal tint for light-bg cards, was green */
+  --fire: #d5584a;        /* ember red, unchanged — still the "intensity" accent */
+  --fire-hot: #ff8a3d;    /* bright ember highlight, unchanged */
+  --fire-deep: #7a1710;   /* dark ember shadow, unchanged */
+  --ink-70: rgba(11, 21, 36, 0.7);
+  --ink-40: rgba(11, 21, 36, 0.4);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-sun: var(--sun);
+  --color-coral: var(--coral);
+  --color-sage: var(--sage);
+  --color-fire: var(--fire);
+  --color-fire-deep: var(--fire-deep);
+  --font-display: var(--font-anton);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+  line-height: 0.86;
+}
+
+/* squiggle divider used as the recurring "route line" motif */
+.route-divider {
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+
+/* .bg-fire-glow {
+  background: linear-gradient(135deg, var(--fire-hot) 0%, var(--fire) 45%, var(--fire-deep) 100%);
+  box-shadow:
+    0 0 0 1px rgba(213, 88, 74, 0.35),
+    0 24px 60px -18px rgba(213, 88, 74, 0.7);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+} */
+
+.card-glow {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px -18px var(--glow-color, rgba(11, 21, 36, 0.35));
+}
+
+.bg-fire-glow {
+  background: linear-gradient(135deg, var(--fire-hot) 0%, var(--fire) 45%, var(--fire-deep) 100%);
+  box-shadow: 0 0 0 1px rgba(213, 88, 74, 0.35);
+}
+
+.corner-stripes {
+  position: relative;
+  overflow: hidden;
+}
+.corner-stripes::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--sun) 0px, var(--sun) 14px,
+    var(--coral) 14px, var(--coral) 28px,
+    transparent 28px, transparent 42px
+  );
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.chevrons {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--coral);
+  font-style: normal;
+}
+.chevrons span {
+  animation: chevron-pulse 1.6s ease-in-out infinite;
+}
+.chevrons span:nth-child(2) { animation-delay: 0.12s; }
+.chevrons span:nth-child(3) { animation-delay: 0.24s; }
+.chevrons span:nth-child(4) { animation-delay: 0.36s; }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes chevron-pulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 1; }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: reveal 0.7s ease-out forwards;
+  }
+}
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tag-label {
+  display: inline-block;
+  transform: skewX(-10deg);
+  background: var(--sun);
+  color: var(--ink);
+  padding: 4px 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.tag-label > span {
+  display: inline-block;
+  transform: skewX(10deg); /* un-skew the text so it reads straight */
+}
