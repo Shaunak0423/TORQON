@@ -15,7 +15,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://torqon.vercel.app"; // TODO: replace with your real domain once you have one
+// const siteUrl = "https://torqon.vercel.app"; // TODO: replace with your real domain once you have one
+const siteUrl = "https://shaunak0423.github.io/TORQON";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
