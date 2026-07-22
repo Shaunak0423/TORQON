@@ -3,11 +3,12 @@ import RegisterButton from "./RegisterButton";
 import { EVENT } from "../site.config";
 
 export default function CTAFooter() {
+  const basePath = process.env.DEPLOY_TARGET === "gh-pages" ? "/TORQON" : "";
   return (
     <>
       <section className="relative bg-ink text-paper overflow-hidden">
         <Image
-          src="/illustrations/finish-line.jpeg"
+          src={`${basePath}/illustrations/finish-line.jpeg`}
           alt=""
           fill
           className="object-cover opacity-30"
@@ -30,7 +31,7 @@ export default function CTAFooter() {
         <div className="mx-auto max-w-6xl px-5 md:px-8 py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="relative h-9 w-36">
             <Image
-              src="/brand/torqon-logo-teal.png"
+              src={`${basePath}/brand/torqon-logo-teal.png`}
               alt="TORQON"
               fill
               className="object-contain object-left"

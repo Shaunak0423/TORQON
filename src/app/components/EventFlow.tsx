@@ -21,6 +21,7 @@ const steps = [
 ];
 
 export default function EventFlow() {
+  const basePath = process.env.DEPLOY_TARGET === "gh-pages" ? "/TORQON" : "";
   return (
     <section id="event" className="pattern-corner pattern-yellow bg-coral/25">
     <div className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
@@ -44,7 +45,7 @@ export default function EventFlow() {
                 {step.image && (
                   <div className="relative h-16 w-24 rounded-xl overflow-hidden shrink-0">
                     <Image
-                      src={step.image}
+                      src={`${basePath}${step.image}`}
                       alt=""
                       fill
                       className="object-cover"

@@ -30,6 +30,7 @@ const torqmanSteps = [
 ];
 
 export default function Categories() {
+  const basePath = process.env.DEPLOY_TARGET === "gh-pages" ? "/TORQON" : "";
   return (
     <section id="categories" className="bg-ink text-paper">
       <div className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
@@ -60,7 +61,7 @@ export default function Categories() {
                     </div>
                     <div className="relative h-20 w-28 rounded-xl overflow-hidden shrink-0">
                       <Image
-                        src={r.image}
+                        src={`${basePath}${r.image}`}
                         alt={r.title}
                         fill
                         className="object-cover"
@@ -93,7 +94,7 @@ export default function Categories() {
           {/* Right panel — TORQMAN challenge */}
           <div className="pattern-corner pattern-teal relative bg-ink border-2 border-sage/40 rounded-3xl p-6 md:p-8 overflow-hidden">
             <Image
-              src="/illustrations/finish-line.jpeg"
+              src={`${basePath}/illustrations/finish-line.jpeg`}
               alt=""
               fill
               className="object-cover opacity-25"
