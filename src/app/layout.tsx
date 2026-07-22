@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "TORQON",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "TORQON — Goa Road Marathon",
