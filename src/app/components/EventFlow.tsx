@@ -6,7 +6,7 @@ const steps = [
   { label: "Opening Ceremony", detail: "Warm-up and welcome on stage" },
   { label: "Start · TORQMAN / 10K / 5K / 3K", detail: "Pick your route, hit the road" },
   {
-    label: "Challenge Checkpoints For TORQMAN",
+    label: "TORQMAN | CHALLENGE CHECKPOINTS",
     detail: "Push-ups & mini-challenges along the way",
     image: "/illustrations/water-station.jpeg",
   },
