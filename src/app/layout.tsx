@@ -17,6 +17,7 @@ const inter = Inter({
 
 // const siteUrl = "https://torqon.vercel.app"; // TODO: replace with your real domain once you have one
 const siteUrl = "https://shaunak0423.github.io/TORQON";
+const basePath = process.env.DEPLOY_TARGET === "gh-pages" ? "/TORQON" : "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,10 +59,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TORQON — Goa's First Fitness Challenge Marathon",
     description: "Run. Conquer. Reset. Repeat. 3K · 5K · 10K in Goa.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: "/TabLogo.png",
+    icon: `${basePath}/TabLogo.png`,
   },
 };
 
