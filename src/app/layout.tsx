@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TORQON — Goa's First Fitness Challenge Marathon",
+    title: "TORQON — Goa's First Monsoon Challenge Marathon",
     description: "Run. Conquer. Reset. Repeat. 3K · 5K · 10K in Goa.",
     images: ["/og-image.png"],
   },
