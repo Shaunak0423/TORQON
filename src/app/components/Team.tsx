@@ -36,7 +36,7 @@ function Avatar({ name }: { name: string }) {
 
 export default function Team() {
   return (
-    <section id="team" className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+    <section id="team" className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
       {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
         07 — The people behind it
       </p> */}

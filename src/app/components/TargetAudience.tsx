@@ -14,16 +14,16 @@ const audience = [
 
 export default function TargetAudience() {
   return (
-    <section className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+    <section className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
       {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
         
       </p> */}
       <p className="tag-label text-xs uppercase mb-3">
         <span>05 — Who&apos;s showing up</span>
       </p>
-      <h2 className="font-display text-5xl md:text-7xl mb-14">TARGET AUDIENCE</h2>
+      <h2 className="font-display text-4xl md:text-7xl mb-14">TARGET AUDIENCE</h2>
 
-      <div className="grid md:grid-cols-2 gap-14">
+      <div className="grid md:grid-cols-1 gap-14">
         <div>
           <p className="text-lg leading-relaxed text-ink/70 mb-8">
             Designed for youth, working individuals, fitness enthusiasts and
@@ -43,15 +43,15 @@ export default function TargetAudience() {
           </ul>
           <div className="flex gap-10">
             <div>
-              <p className="font-display text-4xl">18–45</p>
+              <p className="font-display text-1xl md:text-4xl">18–45</p>
               <p className="text-ink/40 text-sm">Core age range</p>
             </div>
             <div>
-              <p className="font-display text-4xl">600–800</p>
+              <p className="font-display text-1xl md:text-4xl">600–800</p>
               <p className="text-ink/40 text-sm">Expected footfall</p>
             </div>
             <div>
-              <p className="font-display text-4xl">55 / 45</p>
+              <p className="font-display text-1xl md:text-4xl">55 / 45</p>
               <p className="text-ink/40 text-sm">Male / Female split</p>
             </div>
           </div>

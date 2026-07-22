@@ -13,26 +13,26 @@ const steps = [
 
 export default function EventFlow() {
   return (
-    <section id="event" className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+    <section id="event" className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
       <p className="tag-label text-xs uppercase mb-3">
         <span>03 — How the day runs</span>
       </p>
-      <h2 className="font-display text-5xl md:text-7xl mb-14">ABOUT THE EVENT</h2>
+      <h2 className="font-display text-4xl md:text-7xl mb-14">ABOUT THE EVENT</h2>
 
       <ol className="space-y-0">
         {steps.map((step, i) => (
           <li key={step.label}>
-            <div className="flex items-start gap-5 md:gap-8">
+            <div className="flex items-start gap-5 mt-1.5 md:gap-8">
               <span className="font-display text-2xl md:text-3xl text-coral shrink-0 w-10 md:w-14">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="pb-2">
-                <h3 className="font-display text-xl md:text-2xl">{step.label}</h3>
+                <h3 className="font-display text-1xl md:text-2xl">{step.label}</h3>
                 <p className="text-ink/70">{step.detail}</p>
               </div>
             </div>
             {i < steps.length - 1 && (
-              <div className="pl-10 md:pt-10">
+              <div className="pb-3 md:pt-10">
                 <RouteDivider color="var(--ink-40)" className="h-6 md:h-8" />
               </div>
             )}

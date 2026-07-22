@@ -8,7 +8,7 @@ export const EVENT = {
   tagline: "Goa's First Fitness Challenge Marathon",
   motto: "Run. Conquer. Reset. Repeat.",
   // TODO: fill in the confirmed date + venue once locked
-  date: "2026 · 08 · 30",
+  date: "30 · 08 · 2026",
   venue: "Ponda | Goa",
-  organisers: "Godspeed x Cosmic Media",
+  organisers: "Cosmic Media X Godspeed",
 };

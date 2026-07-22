@@ -18,7 +18,7 @@ export default function Hero() {
           TORQON
         </h1>
         <p
-          className="reveal font-display italic -skew-x-3 text-2xl md:text-4xl mt-4 md:mt-6 max-w-2xl text-sun"
+          className="reveal font-display italic -skew-x-3 text-1.5xl md:text-4xl mt-4 md:mt-6 max-w-2xl text-sun"
           style={{ animationDelay: "0.1s" }}
         >
           {EVENT.tagline}
@@ -38,26 +38,26 @@ export default function Hero() {
           the end.
         </p>
         <div
-          className="reveal mt-8 flex flex-wrap items-center gap-4"
+          className="reveal mt-8 flex items-center gap-4"
           style={{ animationDelay: "0.3s" }}
         >
           <RegisterButton size="lg" className="!bg-sun !text-ink hover:!bg-white" />
           <a
             href="#event"
-            className="text-paper/80 border-b border-paper/40 hover:border-paper transition-colors pb-0.5"
+            className="text-paper/80 border-b border-paper/20 hover:border-paper transition-colors pb-0.5"
           >
             See how the day runs
           </a>
         </div>
         <div
-          className="reveal mt-10 flex flex-wrap gap-x-8 gap-y-2 text-sm text-paper/60"
+          className="reveal mt-10 flex gap-x-4 gap-y-2 text-sm text-paper/60"
           style={{ animationDelay: "0.4s" }}
         >
           <span>{EVENT.venue}</span>
           <span aria-hidden="true">·</span>
           <span>{EVENT.date}</span>
           <span aria-hidden="true">·</span>
-          <span>3K · 5K · 10K</span>
+          <span>3K · 5K · 10K · TORQMAN</span>
         </div>
       </div>
     </section>

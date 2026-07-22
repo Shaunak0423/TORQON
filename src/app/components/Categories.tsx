@@ -28,7 +28,7 @@ const categories = [
   {
     distance: "TORQMAN",
     title: "The highlight of the event",
-    detail: "The high-intensity challenge.",
+    detail: "The 10KM Marathon with special challenges.",
     color: "bg-fire-glow",
     glow: "rgba(255, 138, 61, 0.75)",
     light: true,
@@ -38,7 +38,7 @@ const categories = [
 export default function Categories() {
   return (
     <section id="categories" className="bg-ink text-paper">
-      <div className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
         {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-paper/40 mb-3">
           
         </p> */}

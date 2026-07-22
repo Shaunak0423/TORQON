@@ -5,8 +5,9 @@ export default function CTAFooter() {
   return (
     <>
       <section className="bg-sun">
-        <div className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28 text-center">
-          <h2 className="font-display text-5xl md:text-6xl mb-6">
+        <div className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28 text-center">
+          {/* <!-- -1px spacing on mobile, 2px on desktop --> */}
+          <h2 className="font-display text-3xl md:text-6xl tracking-[-1px] md:tracking-[2px] mb-6">
             YOUR SPOT ON THE START LINE IS WAITING
           </h2>
           <p className="text-ink/70 text-lg mb-10 max-w-xl mx-auto">

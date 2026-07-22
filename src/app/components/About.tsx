@@ -30,7 +30,7 @@ function Column({ title, items }: { title: string; items: string[] }) {
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+    <section id="about" className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
       {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
         02 — Who&apos;s behind it
       </p> */}
