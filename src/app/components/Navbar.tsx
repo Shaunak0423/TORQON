@@ -1,5 +1,6 @@
 import Image from "next/image";
 import RegisterButton from "./RegisterButton";
+import navbarLogo from '@/brand/torqon-logo-navy.png'
 
 const links = [
   { href: "#about", label: "About" },
@@ -15,7 +16,7 @@ export default function Navbar() {
       <nav className="mx-auto max-w-6xl px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
         <a href="#top" className="relative block h-8 w-32 md:h-10 md:w-40">
           <Image
-            src="/brand/torqon-logo-navy.png"
+            src={navbarLogo}
             alt="TORQON"
             fill
             className="object-contain object-left"

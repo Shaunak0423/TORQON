@@ -2,6 +2,7 @@ import Image from "next/image";
 import RegisterButton from "./RegisterButton";
 import Chevrons from "./Chevrons";
 import { EVENT } from "../site.config";
+import startingBlocks from "@/illustrations/starting-blocks.jpeg";
 
 export default function Hero() {
   return (
@@ -68,7 +69,7 @@ export default function Hero() {
 
         <div className="reveal hidden lg:block relative h-[420px] rounded-3xl overflow-hidden" style={{ animationDelay: "0.15s" }}>
           <Image
-            src="/illustrations/starting-blocks.jpeg"
+            src={startingBlocks}
             alt="Runner at the starting blocks"
             fill
             className="object-cover"
