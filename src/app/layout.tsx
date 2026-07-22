@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Godspeed x Cosmic Media" }],
   openGraph: {
-    title: "TORQON — Goa's First Fitness Challenge Marathon",
+    title: "TORQON — Goa's First Monsoon Challenge Marathon",
     description:
       "Run. Conquer. Reset. Repeat. Challenge checkpoints, ice bath recovery, and Goa's most electric fitness community. 3K · 5K · 10K.",
     url: siteUrl,
