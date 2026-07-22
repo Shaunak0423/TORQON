@@ -4,9 +4,9 @@ import RouteDivider from "./RouteDivider";
 const steps = [
   { label: "Registration", detail: "Check in and collect your BIB" },
   { label: "Opening Ceremony", detail: "Warm-up and welcome on stage" },
-  { label: "Start · 10K / 5K / 3K", detail: "Pick your route, hit the road" },
+  { label: "Start · TORQMAN / 10K / 5K / 3K", detail: "Pick your route, hit the road" },
   {
-    label: "Challenge Checkpoints",
+    label: "Challenge Checkpoints For TORQMAN",
     detail: "Push-ups & mini-challenges along the way",
     image: "/illustrations/water-station.jpeg",
   },
