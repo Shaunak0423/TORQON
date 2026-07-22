@@ -1,15 +1,15 @@
-// import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-const nextConfig = {
-  output: "export",
+const isGithubPages = process.env.DEPLOY_TARGET === "gh-pages";
 
-  basePath: "/TORQON",
-  assetPrefix: "/TORQON/",
-
-  images: {
-    unoptimized: true,
-  },
+const nextConfig: NextConfig = {
+  ...(isGithubPages && {
+    output: "export",
+    basePath: "/TORQON",
+    assetPrefix: "/TORQON/",
+    images: { unoptimized: true },
+  }),
 };
 
-module.exports = nextConfig;
+export default nextConfig;
 
