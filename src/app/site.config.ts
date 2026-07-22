@@ -5,10 +5,10 @@ export const REGISTER_URL =
 
 export const EVENT = {
   name: "TORQON",
-  tagline: "Goa's First Fitness Challenge Marathon",
+  tagline: "Goa's First Monsoon Challenge Marathon",
   motto: "Run. Conquer. Reset. Repeat.",
   // TODO: fill in the confirmed date + venue once locked
-  date: "30 · 08 · 2026",
+  date: "30th August 2026",
   venue: "Ponda | Goa",
-  organisers: "Cosmic Media X Godspeed",
+  organisers: "Cosmic Media x Godspeed",
 };

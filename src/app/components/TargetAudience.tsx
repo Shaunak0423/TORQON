@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const cities = [
   { name: "Ponda", pct: 52.1 },
   { name: "Panjim", pct: 21.3 },
@@ -14,16 +16,13 @@ const audience = [
 
 export default function TargetAudience() {
   return (
-    <section className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
-      {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
-        
-      </p> */}
-      <p className="tag-label text-xs uppercase mb-3">
-        <span>05 — Who&apos;s showing up</span>
+    <section className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+      <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
+        05 — Who&apos;s showing up
       </p>
-      <h2 className="font-display text-4xl md:text-7xl mb-14">TARGET AUDIENCE</h2>
+      <h2 className="font-display text-3xl md:text-7xl mb-14">TARGET AUDIENCE</h2>
 
-      <div className="grid md:grid-cols-1 gap-14">
+      <div className="grid md:grid-cols-2 gap-14">
         <div>
           <p className="text-lg leading-relaxed text-ink/70 mb-8">
             Designed for youth, working individuals, fitness enthusiasts and
@@ -57,8 +56,17 @@ export default function TargetAudience() {
           </div>
         </div>
 
-        {/* <div>
-          <p className="text-sm text-ink/40 mb-4">
+        <div>
+          <div className="relative h-40 rounded-2xl overflow-hidden mb-6">
+            <Image
+              src="/illustrations/joggers.jpeg"
+              alt="Runners on the road"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+          </div>
+          {/* <p className="text-sm text-ink/40 mb-4">
             Where interest is coming from — social survey, 1,113 responses
           </p>
           <div className="space-y-4">
@@ -77,7 +85,7 @@ export default function TargetAudience() {
               </div>
             ))}
           </div> */}
-        {/* </div> */}
+        </div>
       </div>
     </section>
   );

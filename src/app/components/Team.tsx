@@ -8,16 +8,14 @@ const pandavas = [
 
 const founders = [
   {
-    name: "Soham Shet",
-    lines: [
-      // "7× Mr. Goa Championship", "Mr. Asia Winner", "15 years in bodybuilding & fitness"
-    ],
+    name: "Vidyesh Kavlekar",
+    lines: ["7× Mr. Goa Championship", "Mr. Asia Winner", "15 years in bodybuilding & fitness"],
   },
   {
-    name: "Aalok Halankar",
+    name: "Sahil Naik",
     lines: [
-      // "Forbes 30 Under 30 India 2018 & Asia 2019",
-      // "Represented by Gallery Experimenter, exhibited internationally",
+      "Forbes 30 Under 30 India 2018 & Asia 2019",
+      "Represented by Gallery Experimenter, exhibited internationally",
     ],
   },
 ];
@@ -36,14 +34,11 @@ function Avatar({ name }: { name: string }) {
 
 export default function Team() {
   return (
-    <section id="team" className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
-      {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
+    <section id="team" className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+      <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
         07 — The people behind it
-      </p> */}
-      <p className="tag-label text-xs uppercase mb-3">
-        <span>07 — The people behind it</span>
       </p>
-      <h2 className="font-display text-5xl md:text-7xl mb-4">5 PANDAVAS</h2>
+      <h2 className="font-display text-3xl md:text-7xl mb-4">5 PANDAVAS</h2>
       <p className="text-ink/70 mb-12 max-w-xl">
         The core team steering TORQON, each bringing a different strength to
         the table.
@@ -61,8 +56,8 @@ export default function Team() {
         ))}
       </div>
 
-      {/* <h3 className="font-display text-3xl mb-8">Cosmic Media — Founders</h3> */}
-      {/* <div className="grid sm:grid-cols-2 gap-8">
+      {/* <h3 className="font-display text-3xl mb-8">Cosmic Media — Founders</h3>
+      <div className="grid sm:grid-cols-2 gap-8">
         {founders.map((f) => (
           <div key={f.name} className="flex gap-4">
             <Avatar name={f.name} />

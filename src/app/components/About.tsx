@@ -15,10 +15,10 @@ const godspeed = [
 function Column({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h3 className="font-display text-xl mb-4">{title}</h3>
+      <h3 className="font-display text-xl mb-4 text-paper">{title}</h3>
       <ul className="space-y-3">
         {items.map((item) => (
-          <li key={item} className="flex gap-3 text-ink/70 leading-snug">
+          <li key={item} className="flex items-center gap-3 text-lg md:text-xl font-medium text-paper">
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-coral" />
             {item}
           </li>
@@ -30,17 +30,16 @@ function Column({ title, items }: { title: string; items: string[] }) {
 
 export default function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-5 md:px-8 py-14 md:py-28">
-      {/* <p className="text-xs font-semibold tracking-[0.3em] uppercase text-ink/40 mb-3">
-        02 — Who&apos;s behind it
-      </p> */}
-      <p className="tag-label text-xs uppercase mb-3">
-        <span>02 — Who&apos;s behind it</span>
+    <section id="about" className="pattern-corner pattern-orange bg-sun">
+      <div className="mx-auto max-w-6xl px-5 md:px-8 py-20 md:py-28">
+      <p className="tag-label text-xs uppercase mb-6">
+          <span>05 — Who&apos;s behind it</span>
       </p>
-      <h2 className="font-display text-5xl md:text-7xl mb-12">ABOUT US</h2>
+      <h2 className="font-display text-4xl md:text-6xl mb-8 text-paper">ABOUT US</h2>
       <div className="grid md:grid-cols-2 gap-12">
         <Column title="Cosmic Media" items={cosmic} />
         <Column title="Godspeed" items={godspeed} />
+      </div>
       </div>
     </section>
   );

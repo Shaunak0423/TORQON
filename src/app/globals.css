@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0b1524;         /* poster's deep navy — main dark bg/text */
-  --paper: #f4f6f8;       /* cool near-white, replaces warm cream */
-  --sun: #f2661e;         /* poster orange — main accent, was mustard yellow */
-  --coral: #1c9db3;       /* poster teal — was pink/coral */
-  --sage: #bde4e8;        /* pale teal tint for light-bg cards, was green */
-  --fire: #d5584a;        /* ember red, unchanged — still the "intensity" accent */
-  --fire-hot: #ff8a3d;    /* bright ember highlight, unchanged */
-  --fire-deep: #7a1710;   /* dark ember shadow, unchanged */
-  --ink-70: rgba(11, 21, 36, 0.7);
-  --ink-40: rgba(11, 21, 36, 0.4);
+  --ink: #0d1b3d;         /* official brand navy */
+  --paper: #f7f4ec;       /* warm off-white, matches brand board bg */
+  --sun: #f15a24;         /* official brand orange — primary accent */
+  --coral: #ffc233;       /* official brand yellow — secondary accent */
+  --sage: #008b7a;        /* official brand teal — tertiary accent */
+  --fire: #d5584a;        /* ember red — TORQMAN exclusive accent */
+  --fire-hot: #ff8a3d;
+  --fire-deep: #7a1710;
+  --ink-70: rgba(13, 27, 61, 0.7);
+  --ink-40: rgba(13, 27, 61, 0.4);
 }
 
 @theme inline {
@@ -48,20 +48,13 @@ body {
   display: block;
 }
 
-/* .bg-fire-glow {
-  background: linear-gradient(135deg, var(--fire-hot) 0%, var(--fire) 45%, var(--fire-deep) 100%);
-  box-shadow:
-    0 0 0 1px rgba(213, 88, 74, 0.35),
-    0 24px 60px -18px rgba(213, 88, 74, 0.7);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-} */
-
+/* shared hover-glow behavior; each card supplies its own --glow-color */
 .card-glow {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 .card-glow:hover {
   transform: translateY(-4px);
-  box-shadow: 0 22px 55px -18px var(--glow-color, rgba(11, 21, 36, 0.35));
+  box-shadow: 0 22px 55px -18px var(--glow-color, rgba(13, 27, 61, 0.35));
 }
 
 .bg-fire-glow {
@@ -69,6 +62,7 @@ body {
   box-shadow: 0 0 0 1px rgba(213, 88, 74, 0.35);
 }
 
+/* diagonal corner-stripe flourish, brand-inspired, used sparingly (hero only) */
 .corner-stripes {
   position: relative;
   overflow: hidden;
@@ -83,17 +77,37 @@ body {
   background: repeating-linear-gradient(
     -45deg,
     var(--sun) 0px, var(--sun) 14px,
-    var(--coral) 14px, var(--coral) 28px,
+    var(--sage) 14px, var(--sage) 28px,
     transparent 28px, transparent 42px
   );
   opacity: 0.9;
   pointer-events: none;
 }
 
+/* low-opacity brand pattern watermark, tucked in a card corner — never behind text */
+.pattern-corner {
+  position: relative;
+  overflow: hidden;
+}
+.pattern-corner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-size: 140px 140px;
+  opacity: 0.14;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+.pattern-corner.pattern-orange::after { background-image: url("/patterns/pattern-orange.jpeg"); }
+.pattern-corner.pattern-yellow::after { background-image: url("/patterns/pattern-yellow.jpeg"); }
+.pattern-corner.pattern-teal::after   { background-image: url("/patterns/pattern-teal.jpeg"); }
+
+/* pulsing chevron speed-marks */
 .chevrons {
   display: inline-flex;
   gap: 2px;
-  color: var(--coral);
+  color: var(--sage);
   font-style: normal;
 }
 .chevrons span {
@@ -103,11 +117,19 @@ body {
 .chevrons span:nth-child(3) { animation-delay: 0.24s; }
 .chevrons span:nth-child(4) { animation-delay: 0.36s; }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes chevron-pulse {
-    0%, 100% { opacity: 0.35; }
-    50% { opacity: 1; }
-  }
+/* slanted jersey-tag label for section eyebrows */
+.tag-label {
+  display: inline-block;
+  transform: skewX(-10deg);
+  background: var(--sun);
+  color: var(--paper);
+  padding: 4px 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.tag-label > span {
+  display: inline-block;
+  transform: skewX(10deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -116,24 +138,14 @@ body {
     transform: translateY(16px);
     animation: reveal 0.7s ease-out forwards;
   }
+  @keyframes chevron-pulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 1; }
+  }
 }
 @keyframes reveal {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.tag-label {
-  display: inline-block;
-  transform: skewX(-10deg);
-  background: var(--sun);
-  color: var(--ink);
-  padding: 4px 14px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-.tag-label > span {
-  display: inline-block;
-  transform: skewX(10deg); /* un-skew the text so it reads straight */
 }

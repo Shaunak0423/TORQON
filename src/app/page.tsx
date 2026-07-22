@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import BrandStrip from "./components/BrandStrip";
 import About from "./components/About";
 import WhyTorqon from "./components/WhyTorqon";
 import EventFlow from "./components/EventFlow";
@@ -15,13 +16,14 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <BrandStrip />
         <WhyTorqon />
         <EventFlow />
         <Categories />
-        <TargetAudience />
-        <Sponsorship />
+        {/* <TargetAudience /> */}
+        {/* <Sponsorship /> */}
         <About />
-        <Team />
+        {/* <Team /> */}
       </main>
       <CTAFooter />
     </>

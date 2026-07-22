@@ -1,10 +1,11 @@
+import Image from "next/image";
 import RegisterButton from "./RegisterButton";
 
 const links = [
+  { href: "#about", label: "About" },
   { href: "#event", label: "The Event" },
   { href: "#categories", label: "Categories" },
   { href: "#sponsors", label: "Sponsors" },
-  { href: "#about", label: "About" },
   { href: "#team", label: "Team" },
 ];
 
@@ -12,8 +13,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b-2 border-ink">
       <nav className="mx-auto max-w-6xl px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
-        <a href="#top" className="font-display text-2xl md:text-3xl tracking-wide">
-          TORQON
+        <a href="#top" className="relative block h-8 w-32 md:h-10 md:w-40">
+          <Image
+            src="/brand/torqon-logo-navy.png"
+            alt="TORQON"
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </a>
         <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
           {links.map((l) => (
