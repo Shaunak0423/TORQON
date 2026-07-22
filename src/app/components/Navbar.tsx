@@ -1,6 +1,5 @@
 import Image from "next/image";
 import RegisterButton from "./RegisterButton";
-import navbarLogo from '@/brand/torqon-logo-navy.png'
 
 const links = [
   { href: "#about", label: "About" },
@@ -11,12 +10,13 @@ const links = [
 ];
 
 export default function Navbar() {
+  const basePath = process.env.DEPLOY_TARGET === "gh-pages" ? "/TORQON" : "";
   return (
     <header className="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b-2 border-ink">
       <nav className="mx-auto max-w-6xl px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
         <a href="#top" className="relative block h-8 w-32 md:h-10 md:w-40">
           <Image
-            src={navbarLogo}
+            src={`${basePath}/brand/torqon-logo-navy.png`}
             alt="TORQON"
             fill
             className="object-contain object-left"
