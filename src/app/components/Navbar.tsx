@@ -5,8 +5,8 @@ const links = [
   { href: "#about", label: "About" },
   { href: "#event", label: "The Event" },
   { href: "#categories", label: "Categories" },
-  { href: "#sponsors", label: "Sponsors" },
-  { href: "#team", label: "Team" },
+  // { href: "#sponsors", label: "Sponsors" },
+  // { href: "#team", label: "Team" },
 ];
 
 export default function Navbar() {
